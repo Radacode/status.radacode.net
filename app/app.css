@@ -128,15 +128,15 @@ a {
 }
 
 @keyframes blink {
-    to {
-        color: #ffffff;
-    }
+    0% {color: #FF1177;}
+    50% {color: #ffffff;}
+    100% {color: #FF1177;}
 }
 
 @-webkit-keyframes blink {
-    to {
-        color: #ffffff;
-    }
+    0% {color: #FF1177;}
+    50% {color: #ffffff;}
+    100% {color: #FF1177;}
 }
 
 /* http://codepen.io/FelixRilling/pen/qzfoc
@@ -154,9 +154,6 @@ a {
 .pink a {
     color: #FF1177;
     font-family: Monoton;
-    -webkit-animation: none;
-    -moz-animation: none;
-    animation: none;
 }
 
 .blue a {
