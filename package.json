@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "description": "A status report for Radacode Infrastructure availability",
-  "repository": "https://github.com/angular/angular-seed",
+  "repository": "https://github.com/Radacode/status.radacode.net",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
