@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('rdcStatus.check', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/check', {
-    templateUrl: 'check-view/check.html',
-    controller: 'CheckCtrl'
-  });
-}])
-
-.controller('CheckCtrl', [function() {
-
+mainApp.controller('CheckCtrl', ['$scope', '$timeout', '$http', function($scope, $timeout, $http) {
+  $scope.radacodeNetState = 'evaluating';
+  $timeout(function() {
+      $http.get('https://radacode.net')
+          .success(function() {
+              $scope.radacodeNetState = 'active';
+          })
+          .error(function() {
+              $scope.radacodeNetState = 'unavailable';
+          });
+  }, 1000);
 }]);
