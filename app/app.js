@@ -3,7 +3,7 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import './check-view/check.js';
+import './components/check/check.js';
 
 console.log(angular);
 // Declare app level module which depends on views, and components
