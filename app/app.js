@@ -1,11 +1,14 @@
 'use strict';
 
-import 'angular';
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+
+import './check-view/check.js';
 
 console.log(angular);
 // Declare app level module which depends on views, and components
 var mainApp = angular.module('rdcStatus', [
-    'ui.router'
+    uiRouter
 ]);
 
 mainApp.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function ($locationProvider, $stateProvider, $urlRouterProvider) {
