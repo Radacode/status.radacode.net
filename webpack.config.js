@@ -1,15 +1,14 @@
 module.exports = {
-    entry: './app/app.js',
     output: {
-        path: './build/',
-        filename: 'app.js'
+        filename: 'bundle.js'
     },
     devtool: 'sourcemap',
     module: {
         loaders: [
             { test: /\.html$/, loader: 'raw' },
             { test: /\.less$/, loader: 'style!css!less' },
+            { test: /\.css$/, loader: 'style!css' },
             { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
-        ],
+        ]
     }
 };

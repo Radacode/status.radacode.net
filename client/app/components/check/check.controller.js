@@ -11,13 +11,14 @@ class CheckController {
     }
 
     startChecks() {
+        var current = this;
         this.$timeout(function() {
-            this.$http.get('https://radacode.net')
+            current.$http.get('https://radacode.net')
                 .success(function() {
-                    this.$scope.radacodeNetState = 'active';
+                    current.$scope.radacodeNetState = 'active';
                 })
                 .error(function() {
-                    this.$scope.radacodeNetState = 'unavailable';
+                    current.$scope.radacodeNetState = 'unavailable';
                 });
         }, 1000);
     }
