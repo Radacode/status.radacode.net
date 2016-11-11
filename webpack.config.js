@@ -1,5 +1,10 @@
+var path = require("path");
+
 module.exports = {
+    context: path.resolve("client"),
+    entry: ['./app/app'],
     output: {
+        path: path.resolve("./dist"),
         filename: 'bundle.js'
     },
     devtool: 'sourcemap',

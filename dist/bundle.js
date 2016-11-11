@@ -44,27 +44,36 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__(1);
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
-	var _app = __webpack_require__(1);
+	var _app = __webpack_require__(2);
 	
-	var _angular = __webpack_require__(8);
+	var _angular = __webpack_require__(9);
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _angularUiRouter = __webpack_require__(10);
+	var _angularUiRouter = __webpack_require__(11);
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _angularAnimate = __webpack_require__(11);
+	var _angularAnimate = __webpack_require__(12);
 	
 	var _angularAnimate2 = _interopRequireDefault(_angularAnimate);
 	
-	var _components = __webpack_require__(13);
+	var _components = __webpack_require__(14);
+	
+	var _services = __webpack_require__(19);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	_angular2.default.module('app', [_angularUiRouter2.default, _angularAnimate2.default, _components.components.name]).config(function ($locationProvider) {
+	_angular2.default.module('app', [_angularUiRouter2.default, _angularAnimate2.default, _components.components.name, _services.services.name]).config(function ($locationProvider) {
 	    $locationProvider.html5Mode({
 	        enabled: true,
 	        requireBase: false
@@ -72,7 +81,7 @@
 	}).component('app', _app.appComponent);
 
 /***/ },
-/* 1 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -82,13 +91,13 @@
 	});
 	exports.appComponent = undefined;
 	
-	__webpack_require__(2);
+	__webpack_require__(3);
 	
-	var _app = __webpack_require__(6);
+	var _app = __webpack_require__(7);
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _app3 = __webpack_require__(7);
+	var _app3 = __webpack_require__(8);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -98,16 +107,16 @@
 	};
 
 /***/ },
-/* 2 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(3);
+	var content = __webpack_require__(4);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -124,21 +133,21 @@
 	}
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(4)();
+	exports = module.exports = __webpack_require__(5)();
 	// imports
-	
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Bevan|Bungee+Shade|Fugaz+One);", ""]);
 	
 	// module
-	exports.push([module.id, "/* app css stylesheet */\r\n\r\n/* latin-ext */\r\n@font-face {\r\n    font-family: 'Audiowide';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Audiowide'), local('Audiowide-Regular'), url(https://fonts.gstatic.com/s/audiowide/v4/7pSgz2MbVvTCvvm7vukSH4X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');\r\n    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\r\n}\r\n/* latin */\r\n@font-face {\r\n    font-family: 'Audiowide';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Audiowide'), local('Audiowide-Regular'), url(https://fonts.gstatic.com/s/audiowide/v4/8XtYtNKEyyZh481XVWfVOpBw1xU1rKptJj_0jans920.woff2) format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\r\n}\r\n/* latin */\r\n@font-face {\r\n    font-family: 'Iceland';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Iceland'), local('Iceland-Regular'), url(https://fonts.gstatic.com/s/iceland/v5/3MJCdMdmaSZmdrTD7pNyygLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\r\n}\r\n/* latin */\r\n@font-face {\r\n    font-family: 'Monoton';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Monoton'), local('Monoton-Regular'), url(https://fonts.gstatic.com/s/monoton/v6/au96iQ3WM1J9H5fMga5i0QLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\r\n}\r\n/* latin */\r\n@font-face {\r\n    font-family: 'Pacifico';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v7/Q_Z9mv4hySLTMoMjnk_rCXYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\r\n}\r\n/* cyrillic */\r\n@font-face {\r\n    font-family: 'Press Start 2P';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v4/8Lg6LX8-ntOHUQnvQ0E7ozT1DHLc-lgcGofyQSe5eyY.woff2) format('woff2');\r\n    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\r\n}\r\n/* greek */\r\n@font-face {\r\n    font-family: 'Press Start 2P';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v4/8Lg6LX8-ntOHUQnvQ0E7owWe3iFntbc1RMxbGEkS-xE.woff2) format('woff2');\r\n    unicode-range: U+0370-03FF;\r\n}\r\n/* latin-ext */\r\n@font-face {\r\n    font-family: 'Press Start 2P';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v4/8Lg6LX8-ntOHUQnvQ0E7o6SkDmgNrBPNFeI4cxdj3Ko.woff2) format('woff2');\r\n    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\r\n}\r\n/* latin */\r\n@font-face {\r\n    font-family: 'Press Start 2P';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v4/8Lg6LX8-ntOHUQnvQ0E7o69WAFmVxfVhVkWhl-QDeAk.woff2) format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\r\n}\r\n/* latin-ext */\r\n@font-face {\r\n    font-family: 'Vampiro One';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Vampiro One'), local('VampiroOne-Regular'), url(https://fonts.gstatic.com/s/vampiroone/v7/Ho2Xld8UbQyBA8XLxF1_NaE8kM4xWR1_1bYURRojRGc.woff2) format('woff2');\r\n    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\r\n}\r\n/* latin */\r\n@font-face {\r\n    font-family: 'Vampiro One';\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    src: local('Vampiro One'), local('VampiroOne-Regular'), url(https://fonts.gstatic.com/s/vampiroone/v7/Ho2Xld8UbQyBA8XLxF1_NYgp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\r\n}\r\n\r\n\r\n\r\nbody {\r\n  background-color: #222222;\r\n  background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;\r\n  margin: 0px;\r\n}\r\n\r\n#container {\r\n  width: 500px;\r\n  margin: auto;\r\n}\r\n\r\np {\r\n    text-align: center;\r\n    font-size: 3em;\r\n    margin: 20px 0 20px 0;\r\n}\r\n\r\na {\r\n    text-decoration: none;\r\n    -webkit-transition: all 0.5s;\r\n    -moz-transition: all 0.5s;\r\n    transition: all 0.5s;\r\n}\r\n\r\n/* http://jsfiddle.net/jzT8E/6/\r\n   Blinking approach\r\n*/\r\n\r\n.evaluating a {\r\n    animation-duration: 1200ms;\r\n    animation-name: blink;\r\n    animation-iteration-count: infinite;\r\n    animation-direction: alternate;\r\n    -webkit-animation:blink 1200ms infinite;\r\n}\r\n\r\n@keyframes blink {\r\n    0% {color: #FF1177;}\r\n    50% {color: #ffffff;}\r\n    100% {color: #FF1177;}\r\n}\r\n\r\n@-webkit-keyframes blink {\r\n    0% {color: #FF1177;}\r\n    50% {color: #ffffff;}\r\n    100% {color: #FF1177;}\r\n}\r\n\r\n/* http://codepen.io/FelixRilling/pen/qzfoc\r\n   Glow example\r\n*/\r\n\r\n.pink.glow a {\r\n    color: #fff;\r\n    font-family: Monoton;\r\n    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;\r\n    -moz-animation: neon1 1.5s ease-in-out infinite alternate;\r\n    animation: neon1 1.5s ease-in-out infinite alternate;\r\n}\r\n\r\n.pink a {\r\n    color: #FF1177;\r\n    font-family: Monoton;\r\n}\r\n\r\n.blue a {\r\n    font-size: 1.5em;\r\n    color: #228DFF;\r\n    font-family: Iceland;\r\n}\r\n\r\n.blue a:hover {\r\n    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;\r\n    -moz-animation: neon2 1.5s ease-in-out infinite alternate;\r\n    animation: neon2 1.5s ease-in-out infinite alternate;\r\n}\r\n\r\n.yellow a {\r\n    color: #FFDD1B;\r\n    font-family: Pacifico;\r\n}\r\n\r\n.yellow a:hover {\r\n    -webkit-animation: neon3 1.5s ease-in-out infinite alternate;\r\n    -moz-animation: neon3 1.5s ease-in-out infinite alternate;\r\n    animation: neon3 1.5s ease-in-out infinite alternate;\r\n}\r\n\r\n.green a {\r\n    color: #B6FF00;\r\n    font-family: PressStart;\r\n    font-size: 0.8em;\r\n}\r\n\r\n.green a:hover {\r\n    -webkit-animation: neon4 1.5s ease-in-out infinite alternate;\r\n    -moz-animation: neon4 1.5s ease-in-out infinite alternate;\r\n    animation: neon4 1.5s ease-in-out infinite alternate;\r\n}\r\n\r\n.orange a {\r\n    color: #FF9900;\r\n    font-family: Audiowide;\r\n}\r\n\r\n.orange a:hover {\r\n    -webkit-animation: neon5 1.5s ease-in-out infinite alternate;\r\n    -moz-animation: neon5 1.5s ease-in-out infinite alternate;\r\n    animation: neon5 1.5s ease-in-out infinite alternate;\r\n}\r\n\r\n.violet a {\r\n    color: #BA01FF;\r\n    font-family: Vampiro One;\r\n}\r\n\r\n.violet a:hover {\r\n    -webkit-animation: neon6 1.5s ease-in-out infinite alternate;\r\n    -moz-animation: neon6 1.5s ease-in-out infinite alternate;\r\n    animation: neon6 1.5s ease-in-out infinite alternate;\r\n}\r\n\r\np a:hover {\r\n    color: #ffffff;\r\n}\r\n\r\n.greyscale {\r\n    -webkit-filter: grayscale(100%);\r\n    -moz-filter: grayscale(100%);\r\n    -o-filter: grayscale(100%);\r\n    -ms-filter: grayscale(100%);\r\n    filter: grayscale(100%);\r\n}\r\n\r\n/*glow for webkit*/\r\n\r\n@-webkit-keyframes neon1 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;\r\n    }\r\n}\r\n\r\n@-webkit-keyframes neon2 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;\r\n    }\r\n}\r\n\r\n@-webkit-keyframes neon3 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;\r\n    }\r\n}\r\n\r\n@-webkit-keyframes neon4 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;\r\n    }\r\n}\r\n\r\n@-webkit-keyframes neon5 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;\r\n    }\r\n}\r\n\r\n@-webkit-keyframes neon6 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;\r\n    }\r\n}\r\n/*glow for mozilla*/\r\n\r\n@-moz-keyframes neon1 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;\r\n    }\r\n}\r\n\r\n@-moz-keyframes neon2 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;\r\n    }\r\n}\r\n\r\n@-moz-keyframes neon3 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;\r\n    }\r\n}\r\n\r\n@-moz-keyframes neon4 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;\r\n    }\r\n}\r\n\r\n@-moz-keyframes neon5 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;\r\n    }\r\n}\r\n\r\n@-moz-keyframes neon6 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;\r\n    }\r\n}\r\n/*glow*/\r\n\r\n@keyframes neon1 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;\r\n    }\r\n}\r\n\r\n@keyframes neon2 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;\r\n    }\r\n}\r\n\r\n@keyframes neon3 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;\r\n    }\r\n}\r\n\r\n@keyframes neon4 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;\r\n    }\r\n}\r\n\r\n@keyframes neon5 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;\r\n    }\r\n}\r\n\r\n@keyframes neon6 {\r\n    from {\r\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;\r\n    }\r\n    to {\r\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;\r\n    }\r\n}\r\n/*REEEEEEEEEEESPONSIVE*/\r\n\r\n@media (max-width: 650px) {\r\n    #container {\r\n        width: 100%;\r\n    }\r\n    p {\r\n        font-size: 3.5em;\r\n    }\r\n}", ""]);
+	exports.push([module.id, "/* app css stylesheet */\n/* latin-ext */\n@font-face {\n    font-family: 'Audiowide';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Audiowide'), local('Audiowide-Regular'), url(https://fonts.gstatic.com/s/audiowide/v4/7pSgz2MbVvTCvvm7vukSH4X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');\n    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n    font-family: 'Audiowide';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Audiowide'), local('Audiowide-Regular'), url(https://fonts.gstatic.com/s/audiowide/v4/8XtYtNKEyyZh481XVWfVOpBw1xU1rKptJj_0jans920.woff2) format('woff2');\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}\n/* latin */\n@font-face {\n    font-family: 'Iceland';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Iceland'), local('Iceland-Regular'), url(https://fonts.gstatic.com/s/iceland/v5/3MJCdMdmaSZmdrTD7pNyygLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}\n/* latin */\n@font-face {\n    font-family: 'Monoton';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Monoton'), local('Monoton-Regular'), url(https://fonts.gstatic.com/s/monoton/v6/au96iQ3WM1J9H5fMga5i0QLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}\n/* latin */\n@font-face {\n    font-family: 'Pacifico';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v7/Q_Z9mv4hySLTMoMjnk_rCXYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}\n/* cyrillic */\n@font-face {\n    font-family: 'Press Start 2P';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v4/8Lg6LX8-ntOHUQnvQ0E7ozT1DHLc-lgcGofyQSe5eyY.woff2) format('woff2');\n    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;\n}\n/* greek */\n@font-face {\n    font-family: 'Press Start 2P';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v4/8Lg6LX8-ntOHUQnvQ0E7owWe3iFntbc1RMxbGEkS-xE.woff2) format('woff2');\n    unicode-range: U+0370-03FF;\n}\n/* latin-ext */\n@font-face {\n    font-family: 'Press Start 2P';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v4/8Lg6LX8-ntOHUQnvQ0E7o6SkDmgNrBPNFeI4cxdj3Ko.woff2) format('woff2');\n    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n    font-family: 'Press Start 2P';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v4/8Lg6LX8-ntOHUQnvQ0E7o69WAFmVxfVhVkWhl-QDeAk.woff2) format('woff2');\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}\n/* latin-ext */\n@font-face {\n    font-family: 'Vampiro One';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Vampiro One'), local('VampiroOne-Regular'), url(https://fonts.gstatic.com/s/vampiroone/v7/Ho2Xld8UbQyBA8XLxF1_NaE8kM4xWR1_1bYURRojRGc.woff2) format('woff2');\n    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n    font-family: 'Vampiro One';\n    font-style: normal;\n    font-weight: 400;\n    src: local('Vampiro One'), local('VampiroOne-Regular'), url(https://fonts.gstatic.com/s/vampiroone/v7/Ho2Xld8UbQyBA8XLxF1_NYgp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}\n\n\n\nbody {\n  background-color: #222222;\n  background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;\n  margin: 0px;\n}\n\n#container {\n  width: 500px;\n  margin: auto;\n}\n\np {\n    text-align: center;\n    font-size: 3em;\n    margin: 20px 0 20px 0;\n}\n\n.violet, .red, .orange, .amethyst{\n    text-align: left;\n    margin-left: 50%;\n}\n\na {\n    text-decoration: none;\n    -webkit-transition: all 0.5s;\n    -moz-transition: all 0.5s;\n    transition: all 0.5s;\n}\n\n/* http://jsfiddle.net/jzT8E/6/\n   Blinking approach\n*/\n\n.evaluating a {\n    animation-duration: 1200ms;\n    animation-name: blink;\n    animation-iteration-count: infinite;\n    animation-direction: alternate;\n    -webkit-animation:blink 1200ms infinite;\n}\n\n@keyframes blink {\n    0% {color: #FF1177;}\n    50% {color: #ffffff;}\n    100% {color: #FF1177;}\n}\n\n@-webkit-keyframes blink {\n    0% {color: #FF1177;}\n    50% {color: #ffffff;}\n    100% {color: #FF1177;}\n}\n\n/* http://codepen.io/FelixRilling/pen/qzfoc\n   Glow example\n*/\n\n.pink.glow a {\n    color: #fff;\n    font-family: Monoton;\n    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;\n    -moz-animation: neon1 1.5s ease-in-out infinite alternate;\n    animation: neon1 1.5s ease-in-out infinite alternate;\n}\n\n.pink a {\n    color: #FF1177;\n    font-family: Monoton;\n}\n\n.blue a {\n    font-size: 1.5em;\n    color: #52B3D9;\n    font-family: Iceland;\n}\n\n.blue a:hover {\n    text-shadow: 1px 1px 0 #2ecc71 , -1px -1px 0 #2ecc71 , 1px -1px 0 #2ecc71 , -1px 1px 0 #2ecc71 ;\n}\n\n.blue.glow a{\n    text-shadow: 1px 1px 0 #E4F1FE , -1px -1px 0 #E4F1FE , 1px -1px 0 #E4F1FE, -1px 1px 0 #E4F1FE ;\n}\n\n.yellow a {\n    color: #F7CA18;\n    font-family: Pacifico;\n}\n\n.yellow a:hover {\n    text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10) ;\n}\n\n.yellow.glow  a{\n    text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10) ;\n}\n\n.green a {\n    color: #26C281;\n    letter-spacing: 4px;\n    font-family: \"Press Start 2P\";\n    font-size: 0.8em;\n}\n\n.green a:hover {\n    text-shadow: 5px 5px 0 rgba(255,0,0,1) ;\n}\n\n.green.glow a{\n    text-shadow: 5px 5px 0 rgba(255,0,0,1) ;\n}\n\n.orange a {\n    color: #FF9900;\n    font-family: Audiowide;\n}\n\n.orange a:hover {\n    color: #131313;\n    background-color: #e7e5e4;\n    letter-spacing: .15em;\n}\n\n.orange.glow a{\n    color: #131313;\n    background-color: #e7e5e4;\n    letter-spacing: .15em;\n    -webkit-animation: neon5 1.5s ease-in-out infinite alternate;\n    -moz-animation: neon5 1.5s ease-in-out infinite alternate;\n    animation: neon5 1.5s ease-in-out infinite alternate;\n}\n\n.violet a {\n    color: #BA01FF;\n    font-family: \"Bevan\";\n}\n\n.violet a:hover {\n    text-shadow: 2px 2px 0 rgb(238,238,238) , 6px 6px 0 rgb(112,112,112);\n}\n\n.violet.glow a{\n    text-shadow: 2px 2px 0 #DCC6E0 , 6px 6px 0 rgb(112,112,112);\n}\n\n.red a{\n    color: #D24D57;\n    font-family: \"Bungee Shade\";\n}\n\n.red a:hover {\n    color: white; \n}\n\n.red.glow a{\n    border: 4px solid #E74C3C;\n    padding: 0 20px;\n}\n\n.amethyst a{\n    color: #9b59b6;\n    font-family: \"Fugaz One\";\n}\n\n.amethyst a:hover{\n    text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;\n}\n\n.amethyst.glow a{\n    text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 #9b59b6 , 0 3px 0 rgb(187,187,187) , 0 4px 0 #9b59b6 , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px #9b59b6 , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;\n}\n\np a:hover {\n    color: #ffffff;\n}\n\n.greyscale {\n    -webkit-filter: grayscale(100%);\n    -moz-filter: grayscale(100%);\n    -o-filter: grayscale(100%);\n    -ms-filter: grayscale(100%);\n    filter: grayscale(100%);\n}\n\n/*glow for webkit*/\n\n@-webkit-keyframes neon1 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;\n    }\n}\n\n@-webkit-keyframes neon2 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;\n    }\n}\n\n@-webkit-keyframes neon3 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;\n    }\n}\n\n@-webkit-keyframes neon4 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;\n    }\n}\n\n@-webkit-keyframes neon5 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;\n    }\n}\n\n@-webkit-keyframes neon6 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;\n    }\n}\n/*glow for mozilla*/\n\n@-moz-keyframes neon1 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;\n    }\n}\n\n@-moz-keyframes neon2 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;\n    }\n}\n\n@-moz-keyframes neon3 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;\n    }\n}\n\n@-moz-keyframes neon4 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;\n    }\n}\n\n@-moz-keyframes neon5 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;\n    }\n}\n\n@-moz-keyframes neon6 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;\n    }\n}\n/*glow*/\n\n@keyframes neon1 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;\n    }\n}\n\n@keyframes neon2 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;\n    }\n}\n\n@keyframes neon3 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;\n    }\n}\n\n@keyframes neon4 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;\n    }\n}\n\n@keyframes neon5 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;\n    }\n}\n\n@keyframes neon6 {\n    from {\n        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;\n    }\n    to {\n        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;\n    }\n}\n/*REEEEEEEEEEESPONSIVE*/\n\n@media (max-width: 650px) {\n    #container {\n        width: 100%;\n    }\n    p {\n        font-size: 3.5em;\n    }\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports) {
 
 	/*
@@ -194,7 +203,7 @@
 
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -446,13 +455,13 @@
 
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "<header></header>\r\n\r\n<div ui-view></div>\r\n\r\n<footer></footer>"
+	module.exports = "<header></header>\n\n<div ui-view></div>\n\n<footer></footer>"
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -477,19 +486,19 @@
 	exports.AppController = AppController;
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(9);
+	__webpack_require__(10);
 	module.exports = angular;
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	/**
-	 * @license AngularJS v1.5.7
+	 * @license AngularJS v1.5.8
 	 * (c) 2010-2016 Google, Inc. http://angularjs.org
 	 * License: MIT
 	 */
@@ -547,7 +556,7 @@
 	      return match;
 	    });
 	
-	    message += '\nhttp://errors.angularjs.org/1.5.7/' +
+	    message += '\nhttp://errors.angularjs.org/1.5.8/' +
 	      (module ? module + '/' : '') + code;
 	
 	    for (i = SKIP_INDEXES, paramPrefix = '?'; i < templateArgs.length; i++, paramPrefix = '&') {
@@ -1311,7 +1320,13 @@
 	 * * If a destination is provided, all of its elements (for arrays) or properties (for objects)
 	 *   are deleted and then all elements/properties from the source are copied to it.
 	 * * If `source` is not an object or array (inc. `null` and `undefined`), `source` is returned.
-	 * * If `source` is identical to 'destination' an exception will be thrown.
+	 * * If `source` is identical to `destination` an exception will be thrown.
+	 *
+	 * <br />
+	 * <div class="alert alert-warning">
+	 *   Only enumerable properties are taken into account. Non-enumerable properties (both on `source`
+	 *   and on `destination`) will be ignored.
+	 * </div>
 	 *
 	 * @param {*} source The source that will be used to make a copy.
 	 *                   Can be any type, including primitives, `null`, and `undefined`.
@@ -1320,41 +1335,42 @@
 	 * @returns {*} The copy or updated `destination`, if `destination` was specified.
 	 *
 	 * @example
-	 <example module="copyExample">
-	 <file name="index.html">
-	 <div ng-controller="ExampleController">
-	 <form novalidate class="simple-form">
-	 Name: <input type="text" ng-model="user.name" /><br />
-	 E-mail: <input type="email" ng-model="user.email" /><br />
-	 Gender: <input type="radio" ng-model="user.gender" value="male" />male
-	 <input type="radio" ng-model="user.gender" value="female" />female<br />
-	 <button ng-click="reset()">RESET</button>
-	 <button ng-click="update(user)">SAVE</button>
-	 </form>
-	 <pre>form = {{user | json}}</pre>
-	 <pre>master = {{master | json}}</pre>
-	 </div>
+	  <example module="copyExample">
+	    <file name="index.html">
+	      <div ng-controller="ExampleController">
+	        <form novalidate class="simple-form">
+	          <label>Name: <input type="text" ng-model="user.name" /></label><br />
+	          <label>Age:  <input type="number" ng-model="user.age" /></label><br />
+	          Gender: <label><input type="radio" ng-model="user.gender" value="male" />male</label>
+	                  <label><input type="radio" ng-model="user.gender" value="female" />female</label><br />
+	          <button ng-click="reset()">RESET</button>
+	          <button ng-click="update(user)">SAVE</button>
+	        </form>
+	        <pre>form = {{user | json}}</pre>
+	        <pre>master = {{master | json}}</pre>
+	      </div>
+	    </file>
+	    <file name="script.js">
+	      // Module: copyExample
+	      angular.
+	        module('copyExample', []).
+	        controller('ExampleController', ['$scope', function($scope) {
+	          $scope.master = {};
 	
-	 <script>
-	  angular.module('copyExample', [])
-	    .controller('ExampleController', ['$scope', function($scope) {
-	      $scope.master= {};
+	          $scope.reset = function() {
+	            // Example with 1 argument
+	            $scope.user = angular.copy($scope.master);
+	          };
 	
-	      $scope.update = function(user) {
-	        // Example with 1 argument
-	        $scope.master= angular.copy(user);
-	      };
+	          $scope.update = function(user) {
+	            // Example with 2 arguments
+	            angular.copy(user, $scope.master);
+	          };
 	
-	      $scope.reset = function() {
-	        // Example with 2 arguments
-	        angular.copy($scope.master, $scope.user);
-	      };
-	
-	      $scope.reset();
-	    }]);
-	 </script>
-	 </file>
-	 </example>
+	          $scope.reset();
+	        }]);
+	    </file>
+	  </example>
 	 */
 	function copy(source, destination) {
 	  var stackSource = [];
@@ -1461,7 +1477,7 @@
 	      case '[object Uint8ClampedArray]':
 	      case '[object Uint16Array]':
 	      case '[object Uint32Array]':
-	        return new source.constructor(copyElement(source.buffer));
+	        return new source.constructor(copyElement(source.buffer), source.byteOffset, source.length);
 	
 	      case '[object ArrayBuffer]':
 	        //Support: IE10
@@ -2964,6 +2980,7 @@
 	  $HttpParamSerializerJQLikeProvider,
 	  $HttpBackendProvider,
 	  $xhrFactoryProvider,
+	  $jsonpCallbacksProvider,
 	  $LocationProvider,
 	  $LogProvider,
 	  $ParseProvider,
@@ -3001,11 +3018,11 @@
 	 * - `codeName` – `{string}` – Code name of the release, such as "jiggling-armfat".
 	 */
 	var version = {
-	  full: '1.5.7',    // all of these placeholder strings will be replaced by grunt's
+	  full: '1.5.8',    // all of these placeholder strings will be replaced by grunt's
 	  major: 1,    // package task
 	  minor: 5,
-	  dot: 7,
-	  codeName: 'hexagonal-circumvolution'
+	  dot: 8,
+	  codeName: 'arbitrary-fallbacks'
 	};
 	
 	
@@ -3036,7 +3053,7 @@
 	    'isDate': isDate,
 	    'lowercase': lowercase,
 	    'uppercase': uppercase,
-	    'callbacks': {counter: 0},
+	    'callbacks': {$$counter: 0},
 	    'getTestability': getTestability,
 	    '$$minErr': minErr,
 	    '$$csp': csp,
@@ -3125,6 +3142,7 @@
 	        $httpParamSerializerJQLike: $HttpParamSerializerJQLikeProvider,
 	        $httpBackend: $HttpBackendProvider,
 	        $xhrFactory: $xhrFactoryProvider,
+	        $jsonpCallbacks: $jsonpCallbacksProvider,
 	        $location: $LocationProvider,
 	        $log: $LogProvider,
 	        $parse: $ParseProvider,
@@ -3363,7 +3381,7 @@
 	    nodes.push(context.createTextNode(html));
 	  } else {
 	    // Convert html into DOM nodes
-	    tmp = tmp || fragment.appendChild(context.createElement("div"));
+	    tmp = fragment.appendChild(context.createElement("div"));
 	    tag = (TAG_NAME_REGEXP.exec(html) || ["", ""])[1].toLowerCase();
 	    wrap = wrapMap[tag] || wrapMap._default;
 	    tmp.innerHTML = wrap[1] + html.replace(XHTML_TAG_REGEXP, "<$1></$2>") + wrap[2];
@@ -5176,10 +5194,10 @@
 	      if (msie <= 11) {
 	        return false;
 	      }
-	      // Workaround for MS Edge.
-	      // Check https://connect.microsoft.com/IE/Feedback/Details/2211653
+	      // Support: Edge 12-13 only
+	      // See: https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/6156135/
 	      return typeof func === 'function'
-	        && /^(?:class\s|constructor\()/.test(stringifyFn(func));
+	        && /^(?:class\b|constructor\()/.test(stringifyFn(func));
 	    }
 	
 	    function invoke(fn, self, locals, serviceName) {
@@ -7211,8 +7229,9 @@
 	 * There are many different options for a directive.
 	 *
 	 * The difference resides in the return value of the factory function.
-	 * You can either return a "Directive Definition Object" (see below) that defines the directive properties,
-	 * or just the `postLink` function (all other properties will have the default values).
+	 * You can either return a {@link $compile#directive-definition-object Directive Definition Object (see below)}
+	 * that defines the directive properties, or just the `postLink` function (all other properties will have
+	 * the default values).
 	 *
 	 * <div class="alert alert-success">
 	 * **Best Practice:** It's recommended to use the "directive definition object" form.
@@ -7276,6 +7295,125 @@
 	 *   });
 	 * ```
 	 *
+	 * ### Life-cycle hooks
+	 * Directive controllers can provide the following methods that are called by Angular at points in the life-cycle of the
+	 * directive:
+	 * * `$onInit()` - Called on each controller after all the controllers on an element have been constructed and
+	 *   had their bindings initialized (and before the pre &amp; post linking functions for the directives on
+	 *   this element). This is a good place to put initialization code for your controller.
+	 * * `$onChanges(changesObj)` - Called whenever one-way (`<`) or interpolation (`@`) bindings are updated. The
+	 *   `changesObj` is a hash whose keys are the names of the bound properties that have changed, and the values are an
+	 *   object of the form `{ currentValue, previousValue, isFirstChange() }`. Use this hook to trigger updates within a
+	 *   component such as cloning the bound value to prevent accidental mutation of the outer value.
+	 * * `$doCheck()` - Called on each turn of the digest cycle. Provides an opportunity to detect and act on
+	 *   changes. Any actions that you wish to take in response to the changes that you detect must be
+	 *   invoked from this hook; implementing this has no effect on when `$onChanges` is called. For example, this hook
+	 *   could be useful if you wish to perform a deep equality check, or to check a Date object, changes to which would not
+	 *   be detected by Angular's change detector and thus not trigger `$onChanges`. This hook is invoked with no arguments;
+	 *   if detecting changes, you must store the previous value(s) for comparison to the current values.
+	 * * `$onDestroy()` - Called on a controller when its containing scope is destroyed. Use this hook for releasing
+	 *   external resources, watches and event handlers. Note that components have their `$onDestroy()` hooks called in
+	 *   the same order as the `$scope.$broadcast` events are triggered, which is top down. This means that parent
+	 *   components will have their `$onDestroy()` hook called before child components.
+	 * * `$postLink()` - Called after this controller's element and its children have been linked. Similar to the post-link
+	 *   function this hook can be used to set up DOM event handlers and do direct DOM manipulation.
+	 *   Note that child elements that contain `templateUrl` directives will not have been compiled and linked since
+	 *   they are waiting for their template to load asynchronously and their own compilation and linking has been
+	 *   suspended until that occurs.
+	 *
+	 * #### Comparison with Angular 2 life-cycle hooks
+	 * Angular 2 also uses life-cycle hooks for its components. While the Angular 1 life-cycle hooks are similar there are
+	 * some differences that you should be aware of, especially when it comes to moving your code from Angular 1 to Angular 2:
+	 *
+	 * * Angular 1 hooks are prefixed with `$`, such as `$onInit`. Angular 2 hooks are prefixed with `ng`, such as `ngOnInit`.
+	 * * Angular 1 hooks can be defined on the controller prototype or added to the controller inside its constructor.
+	 *   In Angular 2 you can only define hooks on the prototype of the Component class.
+	 * * Due to the differences in change-detection, you may get many more calls to `$doCheck` in Angular 1 than you would to
+	 *   `ngDoCheck` in Angular 2
+	 * * Changes to the model inside `$doCheck` will trigger new turns of the digest loop, which will cause the changes to be
+	 *   propagated throughout the application.
+	 *   Angular 2 does not allow the `ngDoCheck` hook to trigger a change outside of the component. It will either throw an
+	 *   error or do nothing depending upon the state of `enableProdMode()`.
+	 *
+	 * #### Life-cycle hook examples
+	 *
+	 * This example shows how you can check for mutations to a Date object even though the identity of the object
+	 * has not changed.
+	 *
+	 * <example name="doCheckDateExample" module="do-check-module">
+	 *   <file name="app.js">
+	 *     angular.module('do-check-module', [])
+	 *       .component('app', {
+	 *         template:
+	 *           'Month: <input ng-model="$ctrl.month" ng-change="$ctrl.updateDate()">' +
+	 *           'Date: {{ $ctrl.date }}' +
+	 *           '<test date="$ctrl.date"></test>',
+	 *         controller: function() {
+	 *           this.date = new Date();
+	 *           this.month = this.date.getMonth();
+	 *           this.updateDate = function() {
+	 *             this.date.setMonth(this.month);
+	 *           };
+	 *         }
+	 *       })
+	 *       .component('test', {
+	 *         bindings: { date: '<' },
+	 *         template:
+	 *           '<pre>{{ $ctrl.log | json }}</pre>',
+	 *         controller: function() {
+	 *           var previousValue;
+	 *           this.log = [];
+	 *           this.$doCheck = function() {
+	 *             var currentValue = this.date && this.date.valueOf();
+	 *             if (previousValue !== currentValue) {
+	 *               this.log.push('doCheck: date mutated: ' + this.date);
+	 *               previousValue = currentValue;
+	 *             }
+	 *           };
+	 *         }
+	 *       });
+	 *   </file>
+	 *   <file name="index.html">
+	 *     <app></app>
+	 *   </file>
+	 * </example>
+	 *
+	 * This example show how you might use `$doCheck` to trigger changes in your component's inputs even if the
+	 * actual identity of the component doesn't change. (Be aware that cloning and deep equality checks on large
+	 * arrays or objects can have a negative impact on your application performance)
+	 *
+	 * <example name="doCheckArrayExample" module="do-check-module">
+	 *   <file name="index.html">
+	 *     <div ng-init="items = []">
+	 *       <button ng-click="items.push(items.length)">Add Item</button>
+	 *       <button ng-click="items = []">Reset Items</button>
+	 *       <pre>{{ items }}</pre>
+	 *       <test items="items"></test>
+	 *     </div>
+	 *   </file>
+	 *   <file name="app.js">
+	 *      angular.module('do-check-module', [])
+	 *        .component('test', {
+	 *          bindings: { items: '<' },
+	 *          template:
+	 *            '<pre>{{ $ctrl.log | json }}</pre>',
+	 *          controller: function() {
+	 *            this.log = [];
+	 *
+	 *            this.$doCheck = function() {
+	 *              if (this.items_ref !== this.items) {
+	 *                this.log.push('doCheck: items changed');
+	 *                this.items_ref = this.items;
+	 *              }
+	 *              if (!angular.equals(this.items_clone, this.items)) {
+	 *                this.log.push('doCheck: items mutated');
+	 *                this.items_clone = angular.copy(this.items);
+	 *              }
+	 *            };
+	 *          }
+	 *        });
+	 *   </file>
+	 * </example>
 	 *
 	 *
 	 * ### Directive Definition Object
@@ -7450,25 +7588,6 @@
 	 *      then the default translusion is provided.
 	 *    The `$transclude` function also has a method on it, `$transclude.isSlotFilled(slotName)`, which returns
 	 *    `true` if the specified slot contains content (i.e. one or more DOM nodes).
-	 *
-	 * The controller can provide the following methods that act as life-cycle hooks:
-	 * * `$onInit()` - Called on each controller after all the controllers on an element have been constructed and
-	 *   had their bindings initialized (and before the pre &amp; post linking functions for the directives on
-	 *   this element). This is a good place to put initialization code for your controller.
-	 * * `$onChanges(changesObj)` - Called whenever one-way (`<`) or interpolation (`@`) bindings are updated. The
-	 *   `changesObj` is a hash whose keys are the names of the bound properties that have changed, and the values are an
-	 *   object of the form `{ currentValue, previousValue, isFirstChange() }`. Use this hook to trigger updates within a
-	 *   component such as cloning the bound value to prevent accidental mutation of the outer value.
-	 * * `$onDestroy()` - Called on a controller when its containing scope is destroyed. Use this hook for releasing
-	 *   external resources, watches and event handlers. Note that components have their `$onDestroy()` hooks called in
-	 *   the same order as the `$scope.$broadcast` events are triggered, which is top down. This means that parent
-	 *   components will have their `$onDestroy()` hook called before child components.
-	 * * `$postLink()` - Called after this controller's element and its children have been linked. Similar to the post-link
-	 *   function this hook can be used to set up DOM event handlers and do direct DOM manipulation.
-	 *   Note that child elements that contain `templateUrl` directives will not have been compiled and linked since
-	 *   they are waiting for their template to load asynchronously and their own compilation and linking has been
-	 *   suspended until that occurs.
-	 *
 	 *
 	 * #### `require`
 	 * Require another directive and inject its controller as the fourth argument to the linking function. The
@@ -7667,8 +7786,8 @@
 	 *     any other controller.
 	 *
 	 *   * `transcludeFn` - A transclude linking function pre-bound to the correct transclusion scope.
-	 *     This is the same as the `$transclude`
-	 *     parameter of directive controllers, see there for details.
+	 *     This is the same as the `$transclude` parameter of directive controllers,
+	 *     see {@link ng.$compile#-controller- the controller section for details}.
 	 *     `function([scope], cloneLinkingFn, futureParentElement)`.
 	 *
 	 * #### Pre-linking function
@@ -9123,24 +9242,30 @@
 	          addTextInterpolateDirective(directives, node.nodeValue);
 	          break;
 	        case NODE_TYPE_COMMENT: /* Comment */
-	          try {
-	            match = COMMENT_DIRECTIVE_REGEXP.exec(node.nodeValue);
-	            if (match) {
-	              nName = directiveNormalize(match[1]);
-	              if (addDirective(directives, nName, 'M', maxPriority, ignoreDirective)) {
-	                attrs[nName] = trim(match[2]);
-	              }
-	            }
-	          } catch (e) {
-	            // turns out that under some circumstances IE9 throws errors when one attempts to read
-	            // comment's node value.
-	            // Just ignore it and continue. (Can't seem to reproduce in test case.)
-	          }
+	          collectCommentDirectives(node, directives, attrs, maxPriority, ignoreDirective);
 	          break;
 	      }
 	
 	      directives.sort(byPriority);
 	      return directives;
+	    }
+	
+	    function collectCommentDirectives(node, directives, attrs, maxPriority, ignoreDirective) {
+	      // function created because of performance, try/catch disables
+	      // the optimization of the whole function #14848
+	      try {
+	        var match = COMMENT_DIRECTIVE_REGEXP.exec(node.nodeValue);
+	        if (match) {
+	          var nName = directiveNormalize(match[1]);
+	          if (addDirective(directives, nName, 'M', maxPriority, ignoreDirective)) {
+	            attrs[nName] = trim(match[2]);
+	          }
+	        }
+	      } catch (e) {
+	        // turns out that under some circumstances IE9 throws errors when one attempts to read
+	        // comment's node value.
+	        // Just ignore it and continue. (Can't seem to reproduce in test case.)
+	      }
 	    }
 	
 	    /**
@@ -9670,6 +9795,10 @@
 	            } catch (e) {
 	              $exceptionHandler(e);
 	            }
+	          }
+	          if (isFunction(controllerInstance.$doCheck)) {
+	            controllerScope.$watch(function() { controllerInstance.$doCheck(); });
+	            controllerInstance.$doCheck();
 	          }
 	          if (isFunction(controllerInstance.$onDestroy)) {
 	            controllerScope.$on('$destroy', function callOnDestroyHook() {
@@ -10317,7 +10446,7 @@
 	      forEach(bindings, function initializeBinding(definition, scopeName) {
 	        var attrName = definition.attrName,
 	        optional = definition.optional,
-	        mode = definition.mode, // @, =, or &
+	        mode = definition.mode, // @, =, <, or &
 	        lastValue,
 	        parentGet, parentSet, compare, removeWatch;
 	
@@ -10815,7 +10944,7 @@
 	 *         logErrorsToBackend(exception, cause);
 	 *         $log.warn(exception, cause);
 	 *       };
-	 *     });
+	 *     }]);
 	 * ```
 	 *
 	 * <hr />
@@ -10897,7 +11026,7 @@
 	   * * `{'foo': 'bar'}` results in `foo=bar`
 	   * * `{'foo': Date.now()}` results in `foo=2015-04-01T09%3A50%3A49.262Z` (`toISOString()` and encoded representation of a Date object)
 	   * * `{'foo': ['bar', 'baz']}` results in `foo=bar&foo=baz` (repeated key for each array element)
-	   * * `{'foo': {'bar':'baz'}}` results in `foo=%7B%22bar%22%3A%22baz%22%7D"` (stringified and encoded representation of an object)
+	   * * `{'foo': {'bar':'baz'}}` results in `foo=%7B%22bar%22%3A%22baz%22%7D` (stringified and encoded representation of an object)
 	   *
 	   * Note that serializer will sort the request parameters alphabetically.
 	   * */
@@ -11448,7 +11577,7 @@
 	     *
 	     * ### Overriding the Default Transformations Per Request
 	     *
-	     * If you wish override the request/response transformations only for a single request then provide
+	     * If you wish to override the request/response transformations only for a single request then provide
 	     * `transformRequest` and/or `transformResponse` properties on the configuration object passed
 	     * into `$http`.
 	     *
@@ -11491,7 +11620,7 @@
 	     *   * cache a specific response - set config.cache value to TRUE or to a cache object
 	     *
 	     * If caching is enabled, but neither the default cache nor config.cache are set to a cache object,
-	     * then the default `$cacheFactory($http)` object is used.
+	     * then the default `$cacheFactory("$http")` object is used.
 	     *
 	     * The default cache value can be set by updating the
 	     * {@link ng.$http#defaults `$http.defaults.cache`} property or the
@@ -11819,48 +11948,25 @@
 	      config.headers = mergeHeaders(requestConfig);
 	      config.method = uppercase(config.method);
 	      config.paramSerializer = isString(config.paramSerializer) ?
-	        $injector.get(config.paramSerializer) : config.paramSerializer;
+	          $injector.get(config.paramSerializer) : config.paramSerializer;
 	
-	      var serverRequest = function(config) {
-	        var headers = config.headers;
-	        var reqData = transformData(config.data, headersGetter(headers), undefined, config.transformRequest);
-	
-	        // strip content-type if data is undefined
-	        if (isUndefined(reqData)) {
-	          forEach(headers, function(value, header) {
-	            if (lowercase(header) === 'content-type') {
-	                delete headers[header];
-	            }
-	          });
-	        }
-	
-	        if (isUndefined(config.withCredentials) && !isUndefined(defaults.withCredentials)) {
-	          config.withCredentials = defaults.withCredentials;
-	        }
-	
-	        // send request
-	        return sendReq(config, reqData).then(transformResponse, transformResponse);
-	      };
-	
-	      var chain = [serverRequest, undefined];
+	      var requestInterceptors = [];
+	      var responseInterceptors = [];
 	      var promise = $q.when(config);
 	
 	      // apply interceptors
 	      forEach(reversedInterceptors, function(interceptor) {
 	        if (interceptor.request || interceptor.requestError) {
-	          chain.unshift(interceptor.request, interceptor.requestError);
+	          requestInterceptors.unshift(interceptor.request, interceptor.requestError);
 	        }
 	        if (interceptor.response || interceptor.responseError) {
-	          chain.push(interceptor.response, interceptor.responseError);
+	          responseInterceptors.push(interceptor.response, interceptor.responseError);
 	        }
 	      });
 	
-	      while (chain.length) {
-	        var thenFn = chain.shift();
-	        var rejectFn = chain.shift();
-	
-	        promise = promise.then(thenFn, rejectFn);
-	      }
+	      promise = chainInterceptors(promise, requestInterceptors);
+	      promise = promise.then(serverRequest);
+	      promise = chainInterceptors(promise, responseInterceptors);
 	
 	      if (useLegacyPromise) {
 	        promise.success = function(fn) {
@@ -11887,14 +11993,18 @@
 	
 	      return promise;
 	
-	      function transformResponse(response) {
-	        // make a copy since the response must be cacheable
-	        var resp = extend({}, response);
-	        resp.data = transformData(response.data, response.headers, response.status,
-	                                  config.transformResponse);
-	        return (isSuccess(response.status))
-	          ? resp
-	          : $q.reject(resp);
+	
+	      function chainInterceptors(promise, interceptors) {
+	        for (var i = 0, ii = interceptors.length; i < ii;) {
+	          var thenFn = interceptors[i++];
+	          var rejectFn = interceptors[i++];
+	
+	          promise = promise.then(thenFn, rejectFn);
+	        }
+	
+	        interceptors.length = 0;
+	
+	        return promise;
 	      }
 	
 	      function executeHeaderFns(headers, config) {
@@ -11937,6 +12047,37 @@
 	
 	        // execute if header value is a function for merged headers
 	        return executeHeaderFns(reqHeaders, shallowCopy(config));
+	      }
+	
+	      function serverRequest(config) {
+	        var headers = config.headers;
+	        var reqData = transformData(config.data, headersGetter(headers), undefined, config.transformRequest);
+	
+	        // strip content-type if data is undefined
+	        if (isUndefined(reqData)) {
+	          forEach(headers, function(value, header) {
+	            if (lowercase(header) === 'content-type') {
+	              delete headers[header];
+	            }
+	          });
+	        }
+	
+	        if (isUndefined(config.withCredentials) && !isUndefined(defaults.withCredentials)) {
+	          config.withCredentials = defaults.withCredentials;
+	        }
+	
+	        // send request
+	        return sendReq(config, reqData).then(transformResponse, transformResponse);
+	      }
+	
+	      function transformResponse(response) {
+	        // make a copy since the response must be cacheable
+	        var resp = extend({}, response);
+	        resp.data = transformData(response.data, response.headers, response.status,
+	                                  config.transformResponse);
+	        return (isSuccess(response.status))
+	          ? resp
+	          : $q.reject(resp);
 	      }
 	    }
 	
@@ -11984,6 +12125,8 @@
 	     *
 	     * @description
 	     * Shortcut method to perform `JSONP` request.
+	     * If you would like to customise where and how the callbacks are stored then try overriding
+	     * or decorating the {@link $jsonpCallbacks} service.
 	     *
 	     * @param {string} url Relative or absolute URL specifying the destination of the request.
 	     *                     The name of the callback should be the string `JSON_CALLBACK`.
@@ -12257,7 +12400,7 @@
 	/**
 	 * @ngdoc service
 	 * @name $httpBackend
-	 * @requires $window
+	 * @requires $jsonpCallbacks
 	 * @requires $document
 	 * @requires $xhrFactory
 	 *
@@ -12272,8 +12415,8 @@
 	 * $httpBackend} which can be trained with responses.
 	 */
 	function $HttpBackendProvider() {
-	  this.$get = ['$browser', '$window', '$document', '$xhrFactory', function($browser, $window, $document, $xhrFactory) {
-	    return createHttpBackend($browser, $xhrFactory, $browser.defer, $window.angular.callbacks, $document[0]);
+	  this.$get = ['$browser', '$jsonpCallbacks', '$document', '$xhrFactory', function($browser, $jsonpCallbacks, $document, $xhrFactory) {
+	    return createHttpBackend($browser, $xhrFactory, $browser.defer, $jsonpCallbacks, $document[0]);
 	  }];
 	}
 	
@@ -12283,17 +12426,13 @@
 	    $browser.$$incOutstandingRequestCount();
 	    url = url || $browser.url();
 	
-	    if (lowercase(method) == 'jsonp') {
-	      var callbackId = '_' + (callbacks.counter++).toString(36);
-	      callbacks[callbackId] = function(data) {
-	        callbacks[callbackId].data = data;
-	        callbacks[callbackId].called = true;
-	      };
-	
-	      var jsonpDone = jsonpReq(url.replace('JSON_CALLBACK', 'angular.callbacks.' + callbackId),
-	          callbackId, function(status, text) {
-	        completeRequest(callback, status, callbacks[callbackId].data, "", text);
-	        callbacks[callbackId] = noop;
+	    if (lowercase(method) === 'jsonp') {
+	      var callbackPath = callbacks.createCallback(url);
+	      var jsonpDone = jsonpReq(url, callbackPath, function(status, text) {
+	        // jsonpReq only ever sets status to 200 (OK), 404 (ERROR) or -1 (WAITING)
+	        var response = (status === 200) && callbacks.getResponse(callbackPath);
+	        completeRequest(callback, status, response, "", text);
+	        callbacks.removeCallback(callbackPath);
 	      });
 	    } else {
 	
@@ -12395,7 +12534,8 @@
 	    }
 	  };
 	
-	  function jsonpReq(url, callbackId, done) {
+	  function jsonpReq(url, callbackPath, done) {
+	    url = url.replace('JSON_CALLBACK', callbackPath);
 	    // we can't use jQuery/jqLite here because jQuery does crazy stuff with script elements, e.g.:
 	    // - fetches local scripts via XHR and evals them
 	    // - adds and immediately removes script elements from the document
@@ -12413,7 +12553,7 @@
 	      var text = "unknown";
 	
 	      if (event) {
-	        if (event.type === "load" && !callbacks[callbackId].called) {
+	        if (event.type === "load" && !callbacks.wasCalled(callbackPath)) {
 	          event = { type: "error" };
 	        }
 	        text = event.type;
@@ -12612,7 +12752,7 @@
 	     *
 	     * `allOrNothing` is useful for interpolating URLs. `ngSrc` and `ngSrcset` use this behavior.
 	     *
-	     * ####Escaped Interpolation
+	     * #### Escaped Interpolation
 	     * $interpolate provides a mechanism for escaping interpolation markers. Start and end markers
 	     * can be escaped by preceding each of their characters with a REVERSE SOLIDUS U+005C (backslash).
 	     * It will be rendered as a regular start/end marker, and will not be interpreted as an expression
@@ -13034,6 +13174,87 @@
 	    return interval;
 	  }];
 	}
+	
+	/**
+	 * @ngdoc service
+	 * @name $jsonpCallbacks
+	 * @requires $window
+	 * @description
+	 * This service handles the lifecycle of callbacks to handle JSONP requests.
+	 * Override this service if you wish to customise where the callbacks are stored and
+	 * how they vary compared to the requested url.
+	 */
+	var $jsonpCallbacksProvider = function() {
+	  this.$get = ['$window', function($window) {
+	    var callbacks = $window.angular.callbacks;
+	    var callbackMap = {};
+	
+	    function createCallback(callbackId) {
+	      var callback = function(data) {
+	        callback.data = data;
+	        callback.called = true;
+	      };
+	      callback.id = callbackId;
+	      return callback;
+	    }
+	
+	    return {
+	      /**
+	       * @ngdoc method
+	       * @name $jsonpCallbacks#createCallback
+	       * @param {string} url the url of the JSONP request
+	       * @returns {string} the callback path to send to the server as part of the JSONP request
+	       * @description
+	       * {@link $httpBackend} calls this method to create a callback and get hold of the path to the callback
+	       * to pass to the server, which will be used to call the callback with its payload in the JSONP response.
+	       */
+	      createCallback: function(url) {
+	        var callbackId = '_' + (callbacks.$$counter++).toString(36);
+	        var callbackPath = 'angular.callbacks.' + callbackId;
+	        var callback = createCallback(callbackId);
+	        callbackMap[callbackPath] = callbacks[callbackId] = callback;
+	        return callbackPath;
+	      },
+	      /**
+	       * @ngdoc method
+	       * @name $jsonpCallbacks#wasCalled
+	       * @param {string} callbackPath the path to the callback that was sent in the JSONP request
+	       * @returns {boolean} whether the callback has been called, as a result of the JSONP response
+	       * @description
+	       * {@link $httpBackend} calls this method to find out whether the JSONP response actually called the
+	       * callback that was passed in the request.
+	       */
+	      wasCalled: function(callbackPath) {
+	        return callbackMap[callbackPath].called;
+	      },
+	      /**
+	       * @ngdoc method
+	       * @name $jsonpCallbacks#getResponse
+	       * @param {string} callbackPath the path to the callback that was sent in the JSONP request
+	       * @returns {*} the data received from the response via the registered callback
+	       * @description
+	       * {@link $httpBackend} calls this method to get hold of the data that was provided to the callback
+	       * in the JSONP response.
+	       */
+	      getResponse: function(callbackPath) {
+	        return callbackMap[callbackPath].data;
+	      },
+	      /**
+	       * @ngdoc method
+	       * @name $jsonpCallbacks#removeCallback
+	       * @param {string} callbackPath the path to the callback that was sent in the JSONP request
+	       * @description
+	       * {@link $httpBackend} calls this method to remove the callback after the JSONP request has
+	       * completed or timed-out.
+	       */
+	      removeCallback: function(callbackPath) {
+	        var callback = callbackMap[callbackPath];
+	        delete callbacks[callback.id];
+	        delete callbackMap[callbackPath];
+	      }
+	    };
+	  }];
+	};
 	
 	/**
 	 * @ngdoc service
@@ -16480,7 +16701,7 @@
 	 *
 	 * **Methods**
 	 *
-	 * - `then(successCallback, errorCallback, notifyCallback)` – regardless of when the promise was or
+	 * - `then(successCallback, [errorCallback], [notifyCallback])` – regardless of when the promise was or
 	 *   will be resolved or rejected, `then` calls one of the success or error callbacks asynchronously
 	 *   as soon as the result is available. The callbacks are called with a single argument: the result
 	 *   or rejection reason. Additionally, the notify callback may be called zero or more times to
@@ -16491,7 +16712,8 @@
 	 *   with the value which is resolved in that promise using
 	 *   [promise chaining](http://www.html5rocks.com/en/tutorials/es6/promises/#toc-promises-queues)).
 	 *   It also notifies via the return value of the `notifyCallback` method. The promise cannot be
-	 *   resolved or rejected from the notifyCallback method.
+	 *   resolved or rejected from the notifyCallback method. The errorCallback and notifyCallback
+	 *   arguments are optional.
 	 *
 	 * - `catch(errorCallback)` – shorthand for `promise.then(null, errorCallback)`
 	 *
@@ -16906,6 +17128,30 @@
 	    return deferred.promise;
 	  }
 	
+	  /**
+	   * @ngdoc method
+	   * @name $q#race
+	   * @kind function
+	   *
+	   * @description
+	   * Returns a promise that resolves or rejects as soon as one of those promises
+	   * resolves or rejects, with the value or reason from that promise.
+	   *
+	   * @param {Array.<Promise>|Object.<Promise>} promises An array or hash of promises.
+	   * @returns {Promise} a promise that resolves or rejects as soon as one of the `promises`
+	   * resolves or rejects, with the value or reason from that promise.
+	   */
+	
+	  function race(promises) {
+	    var deferred = defer();
+	
+	    forEach(promises, function(promise) {
+	      when(promise).then(deferred.resolve, deferred.reject);
+	    });
+	
+	    return deferred.promise;
+	  }
+	
 	  var $Q = function Q(resolver) {
 	    if (!isFunction(resolver)) {
 	      throw $qMinErr('norslvr', "Expected resolverFn, got '{0}'", resolver);
@@ -16935,6 +17181,7 @@
 	  $Q.when = when;
 	  $Q.resolve = resolve;
 	  $Q.all = all;
+	  $Q.race = race;
 	
 	  return $Q;
 	}
@@ -20286,10 +20533,11 @@
 	 *   - `Object`: A pattern object can be used to filter specific properties on objects contained
 	 *     by `array`. For example `{name:"M", phone:"1"}` predicate will return an array of items
 	 *     which have property `name` containing "M" and property `phone` containing "1". A special
-	 *     property name `$` can be used (as in `{$:"text"}`) to accept a match against any
-	 *     property of the object or its nested object properties. That's equivalent to the simple
-	 *     substring match with a `string` as described above. The predicate can be negated by prefixing
-	 *     the string with `!`.
+	 *     property name (`$` by default) can be used (e.g. as in `{$: "text"}`) to accept a match
+	 *     against any property of the object or its nested object properties. That's equivalent to the
+	 *     simple substring match with a `string` as described above. The special property name can be
+	 *     overwritten, using the `anyPropertyKey` parameter.
+	 *     The predicate can be negated by prefixing the string with `!`.
 	 *     For example `{name: "!M"}` predicate will return an array of items which have property `name`
 	 *     not containing "M".
 	 *
@@ -20322,6 +20570,9 @@
 	 *
 	 *     Primitive values are converted to strings. Objects are not compared against primitives,
 	 *     unless they have a custom `toString` method (e.g. `Date` objects).
+	 *
+	 * @param {string=} anyPropertyKey The special property name that matches against any property.
+	 *     By default `$`.
 	 *
 	 * @example
 	   <example>
@@ -20391,8 +20642,9 @@
 	     </file>
 	   </example>
 	 */
+	
 	function filterFilter() {
-	  return function(array, expression, comparator) {
+	  return function(array, expression, comparator, anyPropertyKey) {
 	    if (!isArrayLike(array)) {
 	      if (array == null) {
 	        return array;
@@ -20401,6 +20653,7 @@
 	      }
 	    }
 	
+	    anyPropertyKey = anyPropertyKey || '$';
 	    var expressionType = getTypeForFilter(expression);
 	    var predicateFn;
 	    var matchAgainstAnyProp;
@@ -20417,7 +20670,7 @@
 	        //jshint -W086
 	      case 'object':
 	        //jshint +W086
-	        predicateFn = createPredicateFn(expression, comparator, matchAgainstAnyProp);
+	        predicateFn = createPredicateFn(expression, comparator, anyPropertyKey, matchAgainstAnyProp);
 	        break;
 	      default:
 	        return array;
@@ -20428,8 +20681,8 @@
 	}
 	
 	// Helper functions for `filterFilter`
-	function createPredicateFn(expression, comparator, matchAgainstAnyProp) {
-	  var shouldMatchPrimitives = isObject(expression) && ('$' in expression);
+	function createPredicateFn(expression, comparator, anyPropertyKey, matchAgainstAnyProp) {
+	  var shouldMatchPrimitives = isObject(expression) && (anyPropertyKey in expression);
 	  var predicateFn;
 	
 	  if (comparator === true) {
@@ -20457,25 +20710,25 @@
 	
 	  predicateFn = function(item) {
 	    if (shouldMatchPrimitives && !isObject(item)) {
-	      return deepCompare(item, expression.$, comparator, false);
+	      return deepCompare(item, expression[anyPropertyKey], comparator, anyPropertyKey, false);
 	    }
-	    return deepCompare(item, expression, comparator, matchAgainstAnyProp);
+	    return deepCompare(item, expression, comparator, anyPropertyKey, matchAgainstAnyProp);
 	  };
 	
 	  return predicateFn;
 	}
 	
-	function deepCompare(actual, expected, comparator, matchAgainstAnyProp, dontMatchWholeObject) {
+	function deepCompare(actual, expected, comparator, anyPropertyKey, matchAgainstAnyProp, dontMatchWholeObject) {
 	  var actualType = getTypeForFilter(actual);
 	  var expectedType = getTypeForFilter(expected);
 	
 	  if ((expectedType === 'string') && (expected.charAt(0) === '!')) {
-	    return !deepCompare(actual, expected.substring(1), comparator, matchAgainstAnyProp);
+	    return !deepCompare(actual, expected.substring(1), comparator, anyPropertyKey, matchAgainstAnyProp);
 	  } else if (isArray(actual)) {
 	    // In case `actual` is an array, consider it a match
 	    // if ANY of it's items matches `expected`
 	    return actual.some(function(item) {
-	      return deepCompare(item, expected, comparator, matchAgainstAnyProp);
+	      return deepCompare(item, expected, comparator, anyPropertyKey, matchAgainstAnyProp);
 	    });
 	  }
 	
@@ -20484,11 +20737,11 @@
 	      var key;
 	      if (matchAgainstAnyProp) {
 	        for (key in actual) {
-	          if ((key.charAt(0) !== '$') && deepCompare(actual[key], expected, comparator, true)) {
+	          if ((key.charAt(0) !== '$') && deepCompare(actual[key], expected, comparator, anyPropertyKey, true)) {
 	            return true;
 	          }
 	        }
-	        return dontMatchWholeObject ? false : deepCompare(actual, expected, comparator, false);
+	        return dontMatchWholeObject ? false : deepCompare(actual, expected, comparator, anyPropertyKey, false);
 	      } else if (expectedType === 'object') {
 	        for (key in expected) {
 	          var expectedVal = expected[key];
@@ -20496,9 +20749,9 @@
 	            continue;
 	          }
 	
-	          var matchAnyProperty = key === '$';
+	          var matchAnyProperty = key === anyPropertyKey;
 	          var actualVal = matchAnyProperty ? actual : actual[key];
-	          if (!deepCompare(actualVal, expectedVal, comparator, matchAnyProperty, matchAnyProperty)) {
+	          if (!deepCompare(actualVal, expectedVal, comparator, anyPropertyKey, matchAnyProperty, matchAnyProperty)) {
 	            return false;
 	          }
 	        }
@@ -22328,9 +22581,11 @@
 	 *
 	 * @description
 	 *
-	 * Sets the `readOnly` attribute on the element, if the expression inside `ngReadonly` is truthy.
+	 * Sets the `readonly` attribute on the element, if the expression inside `ngReadonly` is truthy.
+	 * Note that `readonly` applies only to `input` elements with specific types. [See the input docs on
+	 * MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-readonly) for more information.
 	 *
-	 * A special directive is necessary because we cannot use interpolation inside the `readOnly`
+	 * A special directive is necessary because we cannot use interpolation inside the `readonly`
 	 * attribute. See the {@link guide/interpolation interpolation guide} for more info.
 	 *
 	 * @example
@@ -22367,6 +22622,13 @@
 	 * A special directive is necessary because we cannot use interpolation inside the `selected`
 	 * attribute. See the {@link guide/interpolation interpolation guide} for more info.
 	 *
+	 * <div class="alert alert-warning">
+	 *   **Note:** `ngSelected` does not interact with the `select` and `ngModel` directives, it only
+	 *   sets the `selected` attribute on the element. If you are using `ngModel` on the select, you
+	 *   should not use `ngSelected` on the options, as `ngModel` will set the select value and
+	 *   selected options.
+	 * </div>
+	 *
 	 * @example
 	    <example>
 	      <file name="index.html">
@@ -22402,6 +22664,11 @@
 	 *
 	 * A special directive is necessary because we cannot use interpolation inside the `open`
 	 * attribute. See the {@link guide/interpolation interpolation guide} for more info.
+	 *
+	 * ## A note about browser compatibility
+	 *
+	 * Edge, Firefox, and Internet Explorer do not support the `details` element, it is
+	 * recommended to use {@link ng.ngShow} and {@link ng.ngHide} instead.
 	 *
 	 * @example
 	     <example>
@@ -24480,7 +24747,7 @@
 	
 	    attr.$observe('min', function(val) {
 	      if (isDefined(val) && !isNumber(val)) {
-	        val = parseFloat(val, 10);
+	        val = parseFloat(val);
 	      }
 	      minVal = isNumber(val) && !isNaN(val) ? val : undefined;
 	      // TODO(matsko): implement validateLater to reduce number of validations
@@ -24496,7 +24763,7 @@
 	
 	    attr.$observe('max', function(val) {
 	      if (isDefined(val) && !isNumber(val)) {
-	        val = parseFloat(val, 10);
+	        val = parseFloat(val);
 	      }
 	      maxVal = isNumber(val) && !isNaN(val) ? val : undefined;
 	      // TODO(matsko): implement validateLater to reduce number of validations
@@ -25302,6 +25569,11 @@
 	 *
 	 * When the expression changes, the previously added classes are removed and only then are the
 	 * new classes added.
+	 *
+	 * @knownIssue
+	 * You should not use {@link guide/interpolation interpolation} in the value of the `class`
+	 * attribute, when using the `ngClass` directive on the same element.
+	 * See {@link guide/interpolation#known-issues here} for more info.
 	 *
 	 * @animations
 	 * | Animation                        | Occurs                              |
@@ -29248,7 +29520,7 @@
 	
 	          for (var i = options.items.length - 1; i >= 0; i--) {
 	            var option = options.items[i];
-	            if (option.group) {
+	            if (isDefined(option.group)) {
 	              jqLiteRemove(option.element.parentNode);
 	            } else {
 	              jqLiteRemove(option.element);
@@ -29280,7 +29552,8 @@
 	              listFragment.appendChild(groupElement);
 	
 	              // Update the label on the group element
-	              groupElement.label = option.group;
+	              // "null" is special cased because of Safari
+	              groupElement.label = option.group === null ? 'null' : option.group;
 	
 	              // Store it for use later
 	              groupElementMap[option.group] = groupElement;
@@ -30465,6 +30738,11 @@
 	 * @description
 	 * The `ngStyle` directive allows you to set CSS style on an HTML element conditionally.
 	 *
+	 * @knownIssue
+	 * You should not use {@link guide/interpolation interpolation} in the value of the `style`
+	 * attribute, when using the `ngStyle` directive on the same element.
+	 * See {@link guide/interpolation#known-issues here} for more info.
+	 *
 	 * @element ANY
 	 * @param {expression} ngStyle
 	 *
@@ -30876,37 +31154,63 @@
 	 * </example>
 	 */
 	var ngTranscludeMinErr = minErr('ngTransclude');
-	var ngTranscludeDirective = ngDirective({
-	  restrict: 'EAC',
-	  link: function($scope, $element, $attrs, controller, $transclude) {
+	var ngTranscludeDirective = ['$compile', function($compile) {
+	  return {
+	    restrict: 'EAC',
+	    terminal: true,
+	    compile: function ngTranscludeCompile(tElement) {
 	
-	    if ($attrs.ngTransclude === $attrs.$attr.ngTransclude) {
-	      // If the attribute is of the form: `ng-transclude="ng-transclude"`
-	      // then treat it like the default
-	      $attrs.ngTransclude = '';
+	      // Remove and cache any original content to act as a fallback
+	      var fallbackLinkFn = $compile(tElement.contents());
+	      tElement.empty();
+	
+	      return function ngTranscludePostLink($scope, $element, $attrs, controller, $transclude) {
+	
+	        if (!$transclude) {
+	          throw ngTranscludeMinErr('orphan',
+	          'Illegal use of ngTransclude directive in the template! ' +
+	          'No parent directive that requires a transclusion found. ' +
+	          'Element: {0}',
+	          startingTag($element));
+	        }
+	
+	
+	        // If the attribute is of the form: `ng-transclude="ng-transclude"` then treat it like the default
+	        if ($attrs.ngTransclude === $attrs.$attr.ngTransclude) {
+	          $attrs.ngTransclude = '';
+	        }
+	        var slotName = $attrs.ngTransclude || $attrs.ngTranscludeSlot;
+	
+	        // If the slot is required and no transclusion content is provided then this call will throw an error
+	        $transclude(ngTranscludeCloneAttachFn, null, slotName);
+	
+	        // If the slot is optional and no transclusion content is provided then use the fallback content
+	        if (slotName && !$transclude.isSlotFilled(slotName)) {
+	          useFallbackContent();
+	        }
+	
+	        function ngTranscludeCloneAttachFn(clone, transcludedScope) {
+	          if (clone.length) {
+	            $element.append(clone);
+	          } else {
+	            useFallbackContent();
+	            // There is nothing linked against the transcluded scope since no content was available,
+	            // so it should be safe to clean up the generated scope.
+	            transcludedScope.$destroy();
+	          }
+	        }
+	
+	        function useFallbackContent() {
+	          // Since this is the fallback content rather than the transcluded content,
+	          // we link against the scope of this directive rather than the transcluded scope
+	          fallbackLinkFn($scope, function(clone) {
+	            $element.append(clone);
+	          });
+	        }
+	      };
 	    }
-	
-	    function ngTranscludeCloneAttachFn(clone) {
-	      if (clone.length) {
-	        $element.empty();
-	        $element.append(clone);
-	      }
-	    }
-	
-	    if (!$transclude) {
-	      throw ngTranscludeMinErr('orphan',
-	       'Illegal use of ngTransclude directive in the template! ' +
-	       'No parent directive that requires a transclusion found. ' +
-	       'Element: {0}',
-	       startingTag($element));
-	    }
-	
-	    // If there is no slot name defined or the slot name is not optional
-	    // then transclude the slot
-	    var slotName = $attrs.ngTransclude || $attrs.ngTranscludeSlot;
-	    $transclude(ngTranscludeCloneAttachFn, null, slotName);
-	  }
-	});
+	  };
+	}];
 	
 	/**
 	 * @ngdoc directive
@@ -31963,12 +32267,12 @@
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports) {
 
 	/**
 	 * State-based routing for AngularJS
-	 * @version v0.3.1
+	 * @version v0.3.2
 	 * @link http://angular-ui.github.com/
 	 * @license MIT License, http://www.opensource.org/licenses/MIT
 	 */
@@ -32188,6 +32492,11 @@
 	    result[i] = callback(val, i);
 	  });
 	  return result;
+	}
+	
+	// issue #2676 #2889
+	function silenceUncaughtInPromise (promise) {
+	  return promise.then(undefined, function() {}) && promise;
 	}
 	
 	/**
@@ -33234,8 +33543,8 @@
 	  // If the slashes are simply URLEncoded, the browser can choose to pre-decode them,
 	  // and bidirectional encoding/decoding fails.
 	  // Tilde was chosen because it's not a RFC 3986 section 2.2 Reserved Character
-	  function valToString(val) { return val != null ? val.toString().replace(/~/g, "~~").replace(/\//g, "~2F") : val; }
-	  function valFromString(val) { return val != null ? val.toString().replace(/~2F/g, "/").replace(/~~/g, "~") : val; }
+	  function valToString(val) { return val != null ? val.toString().replace(/(~|\/)/g, function (m) { return {'~':'~~', '/':'~2F'}[m]; }) : val; }
+	  function valFromString(val) { return val != null ? val.toString().replace(/(~~|~2F)/g, function (m) { return {'~~':'~', '~2F':'/'}[m]; }) : val; }
 	
 	  var $types = {}, enqueue = true, typeQueue = [], injector, defaultTypes = {
 	    "string": {
@@ -34869,10 +35178,12 @@
 	  $get.$inject = ['$rootScope', '$q', '$view', '$injector', '$resolve', '$stateParams', '$urlRouter', '$location', '$urlMatcherFactory'];
 	  function $get(   $rootScope,   $q,   $view,   $injector,   $resolve,   $stateParams,   $urlRouter,   $location,   $urlMatcherFactory) {
 	
-	    var TransitionSuperseded = $q.reject(new Error('transition superseded'));
-	    var TransitionPrevented = $q.reject(new Error('transition prevented'));
-	    var TransitionAborted = $q.reject(new Error('transition aborted'));
-	    var TransitionFailed = $q.reject(new Error('transition failed'));
+	    var TransitionSupersededError = new Error('transition superseded');
+	
+	    var TransitionSuperseded = silenceUncaughtInPromise($q.reject(TransitionSupersededError));
+	    var TransitionPrevented = silenceUncaughtInPromise($q.reject(new Error('transition prevented')));
+	    var TransitionAborted = silenceUncaughtInPromise($q.reject(new Error('transition aborted')));
+	    var TransitionFailed = silenceUncaughtInPromise($q.reject(new Error('transition failed')));
 	
 	    // Handles the case where a state which is the target of a transition is not found, and the user
 	    // can optionally retry or defer the transition
@@ -34928,7 +35239,10 @@
 	      var retryTransition = $state.transition = $q.when(evt.retry);
 	
 	      retryTransition.then(function() {
-	        if (retryTransition !== $state.transition) return TransitionSuperseded;
+	        if (retryTransition !== $state.transition) {
+	          $rootScope.$broadcast('$stateChangeCancel', redirect.to, redirect.toParams, state, params);
+	          return TransitionSuperseded;
+	        }
 	        redirect.options.$retry = true;
 	        return $state.transitionTo(redirect.to, redirect.toParams, redirect.options);
 	      }, function() {
@@ -35267,7 +35581,10 @@
 	      var transition = $state.transition = resolved.then(function () {
 	        var l, entering, exiting;
 	
-	        if ($state.transition !== transition) return TransitionSuperseded;
+	        if ($state.transition !== transition) {
+	          $rootScope.$broadcast('$stateChangeCancel', to.self, toParams, from.self, fromParams);
+	          return TransitionSuperseded;
+	        }
 	
 	        // Exit 'from' states not kept
 	        for (l = fromPath.length - 1; l >= keep; l--) {
@@ -35288,7 +35605,10 @@
 	        }
 	
 	        // Run it again, to catch any transitions in callbacks
-	        if ($state.transition !== transition) return TransitionSuperseded;
+	        if ($state.transition !== transition) {
+	          $rootScope.$broadcast('$stateChangeCancel', to.self, toParams, from.self, fromParams);
+	          return TransitionSuperseded;
+	        }
 	
 	        // Update globals in $state
 	        $state.$current = to;
@@ -35324,7 +35644,14 @@
 	
 	        return $state.current;
 	      }).then(null, function (error) {
-	        if ($state.transition !== transition) return TransitionSuperseded;
+	        // propagate TransitionSuperseded error without emitting $stateChangeCancel
+	        // as it was already emitted in the success handler above
+	        if (error === TransitionSupersededError) return TransitionSuperseded;
+	
+	        if ($state.transition !== transition) {
+	          $rootScope.$broadcast('$stateChangeCancel', to.self, toParams, from.self, fromParams);
+	          return TransitionSuperseded;
+	        }
 	
 	        $state.transition = null;
 	        /**
@@ -35348,7 +35675,7 @@
 	        evt = $rootScope.$broadcast('$stateChangeError', to.self, toParams, from.self, fromParams, error);
 	
 	        if (!evt.defaultPrevented) {
-	            $urlRouter.update();
+	          $urlRouter.update();
 	        }
 	
 	        return $q.reject(error);
@@ -35463,7 +35790,17 @@
 	      var state = findState(stateOrName, options.relative);
 	      if (!isDefined(state)) { return undefined; }
 	      if (!isDefined($state.$current.includes[state.name])) { return false; }
-	      return params ? equalForKeys(state.params.$$values(params), $stateParams, objectKeys(params)) : true;
+	      if (!params) { return true; }
+	
+	      var keys = objectKeys(params);
+	      for (var i = 0; i < keys.length; i++) {
+	        var key = keys[i], paramDef = state.params[key];
+	        if (paramDef && !paramDef.type.equals($stateParams[key], params[key])) {
+	          return false;
+	        }
+	      }
+	
+	      return true;
 	    };
 	
 	
@@ -36236,9 +36573,9 @@
 	
 	      if (!type.clickable) return;
 	      hookFn = clickHook(element, $state, $timeout, type, function() { return def; });
-	      element.bind("click", hookFn);
+	      element[element.on ? 'on' : 'bind']("click", hookFn);
 	      scope.$on('$destroy', function() {
-	        element.unbind("click", hookFn);
+	        element[element.off ? 'off' : 'unbind']("click", hookFn);
 	      });
 	    }
 	  };
@@ -36288,9 +36625,9 @@
 	
 	      if (!type.clickable) return;
 	      hookFn = clickHook(element, $state, $timeout, type, function() { return def; });
-	      element.bind("click", hookFn);
+	      element[element.on ? 'on' : 'bind']("click", hookFn);
 	      scope.$on('$destroy', function() {
-	        element.unbind("click", hookFn);
+	        element[element.off ? 'off' : 'unbind']("click", hookFn);
 	      });
 	    }
 	  };
@@ -36544,15 +36881,15 @@
 	})(window, window.angular);
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(12);
+	__webpack_require__(13);
 	module.exports = 'ngAnimate';
 
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports) {
 
 	/**
@@ -40697,7 +41034,7 @@
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40707,11 +41044,11 @@
 	});
 	exports.components = undefined;
 	
-	var _angular = __webpack_require__(8);
+	var _angular = __webpack_require__(9);
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _check = __webpack_require__(14);
+	var _check = __webpack_require__(15);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -40720,7 +41057,7 @@
 	exports.components = components;
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40730,11 +41067,11 @@
 	});
 	exports.check = undefined;
 	
-	var _angular = __webpack_require__(8);
+	var _angular = __webpack_require__(9);
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	var _check = __webpack_require__(15);
+	var _check = __webpack_require__(16);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -40747,7 +41084,7 @@
 	}).component('check', _check.checkComponent);
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40757,11 +41094,11 @@
 	});
 	exports.checkComponent = undefined;
 	
-	var _check = __webpack_require__(16);
+	var _check = __webpack_require__(17);
 	
 	var _check2 = _interopRequireDefault(_check);
 	
-	var _check3 = __webpack_require__(17);
+	var _check3 = __webpack_require__(18);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -40771,13 +41108,13 @@
 	};
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports) {
 
-	module.exports = "<div id=\"container\">\r\n\r\n    <p ng-class=\"{greyscale : !(radacodeNetState == 'active'), evaluating : radacodeNetState == 'evaluating', glow : radacodeNetState == 'active'}\" class=\"pink\">\r\n        <a href=\"https://radacode.net\">radacode.net</a>\r\n    </p>\r\n\r\n</div>\r\n"
+	module.exports = "<div id=\"container\">\n\n    <p ng-class=\"{greyscale : !(radacodeNetState == 'active'), evaluating : radacodeNetState == 'evaluating', glow : radacodeNetState == 'active'}\" class=\"pink\">\n        <a href=\"https://radacode.net\">radacode.net</a>\n    </p>\n\n    <p ng-class=\"{greyscale : !(radacodeComState == 'active'), evaluating : radacodeComState == 'evaluating', glow : radacodeComState == 'active'}\" class=\"blue\">\n        <a href=\"https://radacode.com\">radacode.com</a>\n    </p>\n\n    <p ng-class=\"{greyscale : !(jiraState == 'active'), evaluating : jiraState == 'evaluating', glow : jiraState == 'active'}\" class=\"violet\">\n        <a href=\"https://radacode.net\">Jira</a>\n    </p>\n\n    <p ng-class=\"{greyscale : !(cfState == 'active'), evaluating : cfState == 'evaluating', glow : cfState == 'active'}\" class=\"red\">\n        <a href=\"https://cf.radacode.net\">CF</a>\n    </p>\n\n    <p ng-class=\"{greyscale : !(swarmState == 'active'), evaluating : swarmState == 'evaluating', glow : swarmState == 'active'}\" class=\"orange\">\n        <a href=\"https://p4.radacode.net\">SWARM</a>\n    </p>\n\n    <p ng-class=\"{greyscale : !(tcState == 'active'), evaluating : tcState == 'evaluating', glow : tcState == 'active'}\" class=\"amethyst\">\n        <a href=\"https://tc.radacode.net\">TC</a>\n    </p>\n\n    <p ng-class=\"{greyscale : !(wikiState == 'active'), evaluating : wikiState == 'evaluating', glow : wikiState == 'active'}\" class=\"yellow\">\n        <a href=\"https://wiki.radacode.net/\">wiki.radacode.net</a>\n    </p>\n\n    <p ng-class=\"{greyscale : !(skbxState == 'active'), evaluating : skbxState == 'evaluating', glow : skbxState == 'active'}\" class=\"green\">\n        <a href=\"https://skbx.com\">skbx.com</a>\n    </p>\n\n</div>\n"
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40791,40 +41128,191 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var CheckController = function () {
-	    function CheckController($http, $scope, $timeout) {
+	    function CheckController($http, $scope, $timeout, statusCheck) {
 	        _classCallCheck(this, CheckController);
 	
 	        this.$http = $http;
 	        this.$scope = $scope;
 	        this.$timeout = $timeout;
+	        this.statusCheck = statusCheck;
 	    }
 	
 	    _createClass(CheckController, [{
 	        key: '$onInit',
 	        value: function $onInit() {
-	            this.$scope.radacodeNetState = 'evaluating';
+	            var self = this;
+	            self.$scope.radacodeNetState = 'evaluating';
+	            self.$scope.radacodeNetState = 'evaluating';
+	            self.$scope.jiraState = 'evaluating';
+	            self.$scope.cfState = 'evaluating';
+	            self.$scope.swarmState = 'evaluating';
+	            self.$scope.tcState = 'evaluating';
+	            self.$scope.wikiState = 'evaluating';
+	            self.$scope.skbxState = 'evaluating';
 	            this.startChecks();
 	        }
 	    }, {
 	        key: 'startChecks',
 	        value: function startChecks() {
-	            var current = this;
-	            this.$timeout(function () {
-	                current.$http.get('https://radacode.net').success(function () {
-	                    current.$scope.radacodeNetState = 'active';
-	                }).error(function () {
-	                    current.$scope.radacodeNetState = 'unavailable';
-	                });
-	            }, 1000);
+	            this.radacodeNetCheck();
+	            this.radacodeComCheck();
+	            this.jiraCheck();
+	            this.cfCheck();
+	            this.swarmCheck();
+	            this.tcCheck();
+	            this.wikiCheck();
+	            this.skbxCheck();
+	        }
+	    }, {
+	        key: 'radacodeNetCheck',
+	        value: function radacodeNetCheck() {
+	            var self = this;
+	            self.statusCheck.getStatus('https://radacode.net', function () {
+	                self.$scope.radacodeNetState = 'active';
+	            }, function () {
+	                self.$scope.radacodeNetState = 'unavailable';
+	            });
+	        }
+	    }, {
+	        key: 'radacodeComCheck',
+	        value: function radacodeComCheck() {
+	            var self = this;
+	            self.statusCheck.getStatus('https://radacode.com', function () {
+	                self.$scope.radacodeComState = 'active';
+	            }, function () {
+	                self.$scope.radacodeComState = 'unavailable';
+	            });
+	        }
+	    }, {
+	        key: 'jiraCheck',
+	        value: function jiraCheck() {
+	            var self = this;
+	            self.statusCheck.getStatus('https://jira.radacode.net', function () {
+	                self.$scope.jiraState = 'active';
+	            }, function () {
+	                self.$scope.jiraState = 'unavailable';
+	            });
+	        }
+	    }, {
+	        key: 'cfCheck',
+	        value: function cfCheck() {
+	            var self = this;
+	            self.statusCheck.getStatus('https://cf.radacode.net', function () {
+	                self.$scope.cfState = 'active';
+	            }, function () {
+	                self.$scope.cfState = 'unavailable';
+	            });
+	        }
+	    }, {
+	        key: 'swarmCheck',
+	        value: function swarmCheck() {
+	            var self = this;
+	            self.statusCheck.getStatus('https://p4.radacode.net', function () {
+	                self.$scope.swarmState = 'active';
+	            }, function () {
+	                self.$scope.swarmState = 'unavailable';
+	            });
+	        }
+	    }, {
+	        key: 'tcCheck',
+	        value: function tcCheck() {
+	            var self = this;
+	            self.statusCheck.getStatus('https://tc.radacode.net', function () {
+	                self.$scope.tcState = 'active';
+	            }, function () {
+	                self.$scope.tcState = 'unavailable';
+	            });
+	        }
+	    }, {
+	        key: 'wikiCheck',
+	        value: function wikiCheck() {
+	            var self = this;
+	            self.statusCheck.getStatus('https://wiki.radacode.net', function () {
+	                self.$scope.wikiState = 'active';
+	            }, function () {
+	                self.$scope.wikiState = 'unavailable';
+	            });
+	        }
+	    }, {
+	        key: 'skbxCheck',
+	        value: function skbxCheck() {
+	            var self = this;
+	            self.statusCheck.getStatus('https://skbx.com', function () {
+	                self.$scope.skbxState = 'active';
+	            }, function () {
+	                self.$scope.skbxState = 'unavailable';
+	            });
 	        }
 	    }]);
 	
 	    return CheckController;
 	}();
 	
-	CheckController.$inject = ['$http', '$scope', '$timeout'];
+	CheckController.$inject = ['$http', '$scope', '$timeout', 'statusCheck'];
 	
 	exports.CheckController = CheckController;
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.services = undefined;
+	
+	var _angular = __webpack_require__(9);
+	
+	var _angular2 = _interopRequireDefault(_angular);
+	
+	var _statusCheckService = __webpack_require__(20);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var services = exports.services = _angular2.default.module("app.services", []).service("statusCheck", _statusCheckService.statusCheck);
+
+/***/ },
+/* 20 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var statusCheck = exports.statusCheck = function () {
+	    function statusCheck($http, $timeout) {
+	        "ngInject;";
+	
+	        _classCallCheck(this, statusCheck);
+	
+	        this.http = $http;
+	        this.timeout = $timeout;
+	    }
+	
+	    _createClass(statusCheck, [{
+	        key: "getStatus",
+	        value: function getStatus(page, successCallback, errCallback) {
+	            var self = this;
+	            self.timeout(function () {
+	                self.http.get(page).success(function () {
+	                    successCallback();
+	                }).error(function (err) {
+	                    errCallback(err);
+	                });
+	            }, 1000);
+	        }
+	    }]);
+
+	    return statusCheck;
+	}();
 
 /***/ }
 /******/ ]);

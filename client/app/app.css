@@ -1,5 +1,5 @@
 /* app css stylesheet */
-
+@import url('https://fonts.googleapis.com/css?family=Bevan|Bungee+Shade|Fugaz+One');
 /* latin-ext */
 @font-face {
     font-family: 'Audiowide';
@@ -108,6 +108,11 @@ p {
     margin: 20px 0 20px 0;
 }
 
+.violet, .red, .orange, .amethyst{
+    text-align: left;
+    margin-left: 50%;
+}
+
 a {
     text-decoration: none;
     -webkit-transition: all 0.5s;
@@ -158,37 +163,44 @@ a {
 
 .blue a {
     font-size: 1.5em;
-    color: #228DFF;
+    color: #52B3D9;
     font-family: Iceland;
 }
 
 .blue a:hover {
-    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
-    animation: neon2 1.5s ease-in-out infinite alternate;
+    text-shadow: 1px 1px 0 #2ecc71 , -1px -1px 0 #2ecc71 , 1px -1px 0 #2ecc71 , -1px 1px 0 #2ecc71 ;
+}
+
+.blue.glow a{
+    text-shadow: 1px 1px 0 #E4F1FE , -1px -1px 0 #E4F1FE , 1px -1px 0 #E4F1FE, -1px 1px 0 #E4F1FE ;
 }
 
 .yellow a {
-    color: #FFDD1B;
+    color: #F7CA18;
     font-family: Pacifico;
 }
 
 .yellow a:hover {
-    -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon3 1.5s ease-in-out infinite alternate;
-    animation: neon3 1.5s ease-in-out infinite alternate;
+    text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10) ;
+}
+
+.yellow.glow  a{
+    text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10) ;
 }
 
 .green a {
-    color: #B6FF00;
-    font-family: PressStart;
+    color: #26C281;
+    letter-spacing: 4px;
+    font-family: "Press Start 2P";
     font-size: 0.8em;
 }
 
 .green a:hover {
-    -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon4 1.5s ease-in-out infinite alternate;
-    animation: neon4 1.5s ease-in-out infinite alternate;
+    text-shadow: 5px 5px 0 rgba(255,0,0,1) ;
+}
+
+.green.glow a{
+    text-shadow: 5px 5px 0 rgba(255,0,0,1) ;
 }
 
 .orange a {
@@ -197,6 +209,15 @@ a {
 }
 
 .orange a:hover {
+    color: #131313;
+    background-color: #e7e5e4;
+    letter-spacing: .15em;
+}
+
+.orange.glow a{
+    color: #131313;
+    background-color: #e7e5e4;
+    letter-spacing: .15em;
     -webkit-animation: neon5 1.5s ease-in-out infinite alternate;
     -moz-animation: neon5 1.5s ease-in-out infinite alternate;
     animation: neon5 1.5s ease-in-out infinite alternate;
@@ -204,13 +225,42 @@ a {
 
 .violet a {
     color: #BA01FF;
-    font-family: Vampiro One;
+    font-family: "Bevan";
 }
 
 .violet a:hover {
-    -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon6 1.5s ease-in-out infinite alternate;
-    animation: neon6 1.5s ease-in-out infinite alternate;
+    text-shadow: 2px 2px 0 rgb(238,238,238) , 6px 6px 0 rgb(112,112,112);
+}
+
+.violet.glow a{
+    text-shadow: 2px 2px 0 #DCC6E0 , 6px 6px 0 rgb(112,112,112);
+}
+
+.red a{
+    color: #D24D57;
+    font-family: "Bungee Shade";
+}
+
+.red a:hover {
+    color: white; 
+}
+
+.red.glow a{
+    border: 4px solid #E74C3C;
+    padding: 0 20px;
+}
+
+.amethyst a{
+    color: #9b59b6;
+    font-family: "Fugaz One";
+}
+
+.amethyst a:hover{
+    text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
+}
+
+.amethyst.glow a{
+    text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 #9b59b6 , 0 3px 0 rgb(187,187,187) , 0 4px 0 #9b59b6 , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px #9b59b6 , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
 }
 
 p a:hover {
