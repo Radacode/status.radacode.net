@@ -36,18 +36,4 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-.idea/encodings.xml
-
-.idea/jsLibraryMappings.xml
-
-.idea/libraries/status_radacode_net_node_modules.xml
-
-.idea/misc.xml
-
-.idea/modules.xml
-
-.idea/status.radacode.net.iml
-
-.idea/vcs.xml
-
-.idea/workspace.xml
+.idea/
