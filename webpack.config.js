@@ -7,7 +7,7 @@ module.exports = {
         path: path.resolve("./dist"),
         filename: 'bundle.js'
     },
-    devtool: 'sourcemap',
+    devtool: 'source-map',
     module: {
         loaders: [
             { test: /\.html$/, loader: 'raw' },
