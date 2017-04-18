@@ -68,7 +68,7 @@ class CheckController {
 
     swarmCheck() {
         let self = this;
-        self.statusCheck.getStatus('https://p4.radacode.net',()=>{
+        self.statusCheck.getStatus('https://swarm.radacode.net',()=>{
             self.$scope.swarmState = 'active';
         },()=>{
             self.$scope.swarmState = 'unavailable';
