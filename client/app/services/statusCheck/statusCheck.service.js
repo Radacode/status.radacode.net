@@ -8,10 +8,11 @@ export class statusCheck{
     getStatus(page,successCallback,errCallback){
         let self = this;
         self.timeout(()=>{
-            self.http.get(page).success(()=>{
+            self.http.get(page).then(function (success) {
                 successCallback()
-            }).error((err)=>{
-                errCallback(err)});
+            }, function (error) {
+                errCallback(err)}
+                );
         },1000);
     }
 }
