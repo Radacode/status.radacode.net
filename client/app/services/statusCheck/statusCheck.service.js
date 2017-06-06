@@ -5,13 +5,14 @@ export class statusCheck{
         this.timeout = $timeout;
     }
 
-    getStatus(page,successCallback,errCallback){
+    getStatus(page,successCallback,errCallback,sucсessCode = 200){
         let self = this;
         self.timeout(()=>{
             self.http.get(page).then(function (success) {
-                successCallback()
+                if(success.status == sucсessCode) successCallback();
             }, function (error) {
-                errCallback(err)}
+                if(error.status == sucсessCode) successCallback();
+                errCallback(error)}
                 );
         },1000);
     }

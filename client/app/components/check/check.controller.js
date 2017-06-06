@@ -72,7 +72,7 @@ class CheckController {
             self.$scope.swarmState = 'active';
         },()=>{
             self.$scope.swarmState = 'unavailable';
-        })      
+        }, 401)
     }
 
     tcCheck() {

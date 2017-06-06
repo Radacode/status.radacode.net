@@ -29,16 +29,11 @@ gulp.task('serve', () => {
     });
 });
 
-gulp.task('copy', () => gulp
-    .src(paths.toCopy, { base: 'client/' })
-    .pipe(gulp.dest(paths.dest))
-);
-
 gulp.task('watch', () => {
     gulp.watch(paths.app, ['build', browser.reload]);
     gulp.watch(paths.toCopy, ['copy', browser.reload]);
 });
 
 gulp.task('default', (done) => {
-    sync('build', 'copy', 'serve', 'watch', done);
+    sync('build', 'serve', 'watch', done);
 });
