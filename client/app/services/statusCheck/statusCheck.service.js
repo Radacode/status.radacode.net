@@ -12,7 +12,8 @@ export class statusCheck{
                 if(success.status == sucсessCode) successCallback();
             }, function (error) {
                 if(error.status == sucсessCode) successCallback();
-                errCallback(error)}
+                else errCallback(error);
+            }
                 );
         },1000);
     }
